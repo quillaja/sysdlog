@@ -47,6 +47,10 @@ type LevelLogger struct {
 	showName bool
 }
 
+func NewLevelLogger(logger *log.Logger) *LevelLogger {
+	return &LevelLogger{logger, false}
+}
+
 // ShowName toggles the logger to add a human readable
 // level name to the log message prefix.
 func (l *LevelLogger) ShowName(show bool) {
